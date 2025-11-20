@@ -48,3 +48,55 @@ Run the script, passing the target log file as the first argument:
 
 ```bash
 ./triage-log-processor.sh app_output.log
+
+### 2\. The Core Command Pipeline (For reference)
+
+The script uses a multi-line, copy-paste-safe structure for readability:
+
+```bash
+sed -E \
+  -e 's/info/INFO-spock/gi' \
+  -e 's/debug/DEBUG-kirk/gi' \
+  -e 's/error/ERROR-mccoy/gi' \
+  -e 's/failure/FAILURE-scotty/gi' \
+  -e 's/warn/WARN-uhura/gi' \
+  "$1" | sort | tee assignments.txt
+
+*The use of `-e` for each substitution ensures clean execution across terminals.*
+
+### 3\. Reviewing Output
+
+The resulting `assignments.txt` file is automatically sorted alphabetically, making immediate prioritization simple:
+
+```text
+DEBUG-kirk: Database connection successful (Line 4)
+DEBUG-kirk: User login successful (Line 5)
+ERROR-mccoy: Resource not found (Line 1)
+FAILURE-scotty: System crash detected (Line 3)
+INFO-spock: Health check running (Line 2)
+
+-----
+
+## 🤝 Attribution and Professional Disclosure
+
+### Base Repository/Code Reference
+
+This project was based on initial concepts and structures derived from the "Linux Text Processing Tools" module at North Seattle College (IT135). The core concepts for pipeline design are adapted from [link to a specific external tutorial or resource if applicable].
+
+### AI/Chatbot Assistance Policy
+
+In line with academic integrity and modern development practices, I utilized Google's Gemini large language model (LLM) for the following purposes:
+
+1.  **Syntax Debugging:** Correcting the initial `sed` multi-command syntax (e.g., moving from chained `-E` flags to chained `;` or multiple `-e` flags).
+2.  **Code Review:** Verifying best practices for shell variable usage and quoting.
+3.  **Documentation Drafting:** Structuring and refining the language used in this `README.md` and the initial project overview.
+
+No copyrighted code was used, and the final script logic was engineered and tested independently.
+
+-----
+
+## 👤 Author
+
+  * **[Your Name Here]**
+  * **[Your LinkedIn or Portfolio Link]**
+  * **[Your Email]**
