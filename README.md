@@ -47,7 +47,7 @@ A Linux environment (Bash shell) with standard utilities (`sed`, `sort`, `tee`).
 Run the script, passing the target log file as the first argument:
 
 ```bash
-./triage-log-processor.sh app_output.log
+./triage_log_processor.sh app_output.log
 
 ### 2\. The Core Command Pipeline (For reference)
 
