@@ -1,4 +1,4 @@
-# 🛠️ System Log Triage & Assignment Tool (`triage-log-processor.sh`)
+# 🛠️ System Log Triage & Assignment Tool (`triage_log_processor.sh`)
 
 ## Project Overview
 
