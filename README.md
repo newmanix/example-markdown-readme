@@ -32,7 +32,7 @@ The team needed an automated way to:
 
 ### The Solution
 
-The `triage-log-processor.sh` script executes a highly efficient pipeline to perform five separate case-insensitive substitution passes (for `INFO`, `DEBUG`, `ERROR`, `FAILURE`, and `WARN`) on the raw log file. This single execution transforms the log into a categorized list, which is then sorted and saved to a dedicated assignment file. This reduced log analysis time from hours to under 30 seconds.
+The `triage_log_processor.sh` script executes a highly efficient pipeline to perform five separate case-insensitive substitution passes (for `INFO`, `DEBUG`, `ERROR`, `FAILURE`, and `WARN`) on the raw log file. This single execution transforms the log into a categorized list, which is then sorted and saved to a dedicated assignment file. This reduced log analysis time from hours to under 30 seconds.
 
 -----
 
